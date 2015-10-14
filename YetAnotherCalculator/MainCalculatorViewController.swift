@@ -9,6 +9,10 @@
 import UIKit
 
 class MainCalculatorViewController: UIViewController {
+    /*
+    Symbol reference:
+    ÷ × − + √ % ⚙ =
+    */
 
     override func viewDidLoad() {
         super.viewDidLoad()
