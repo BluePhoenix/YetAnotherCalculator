@@ -28,8 +28,8 @@ class MainCalculatorViewController: UIViewController {
     var userIsTypingANumber = false
     var currentOperator: String = ""
     var memoryType:  String = ""
-    var numberOne:   Double = 0.0
-    var numberTwo:   Double = 0.0
+    var numberOne:   Double? = nil
+    var numberTwo:   Double? = nil
     var savedNumber: Double = 0.0
     var tax:         Double = 0.0
 
@@ -69,7 +69,7 @@ class MainCalculatorViewController: UIViewController {
         
         currentOperator = thisOperator
         
-        if numberOne == 0 && numberTwo == 0 {
+        if numberOne == nil && numberTwo == nil {
             switch currentOperator {
             case "÷":
                 currentOperator = "/"
@@ -86,28 +86,35 @@ class MainCalculatorViewController: UIViewController {
             default:
                 break
             }
-        } else if numberOne != 0 && numberTwo == 0 {
+        } else if numberOne != nil && numberTwo == nil {
             switch currentOperator {
             case "÷":
                 currentOperator = "/"
                 numberTwo = displayValue
-                displayValue = numberOne / numberTwo
+                displayValue = numberOne! / numberTwo!
                 numberOne = displayValue
-                numberTwo = 0
+                numberTwo = nil
             case "×":
                 currentOperator = "*"
                 numberTwo = displayValue
+                displayValue = numberOne! * numberTwo!
+                numberOne = displayValue
+                numberTwo = nil
             case "−":
                 currentOperator = "-"
                 numberTwo = displayValue
+                displayValue = numberOne! - numberTwo!
+                numberOne = displayValue
+                numberTwo = nil
             case "+":
                 currentOperator = "+"
                 numberTwo = displayValue
+                displayValue = numberOne! + numberTwo!
+                numberOne = displayValue
+                numberTwo = nil
             default:
                 break
             }
-            
-            numberOne = numberTwo
         }
     }
     
