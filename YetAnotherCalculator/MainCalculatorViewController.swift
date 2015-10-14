@@ -27,6 +27,16 @@ class MainCalculatorViewController: UIViewController {
             displayLabel.text = "\(newValue)"
         }
     }
+    
+    var userIsTypingANumber = false
+    var currentOperator: String = ""
+    var memoryType:  String = ""
+    var numberOne:   Double = 0.0
+    var numberTwo:   Double = 0.0
+    var savedNumber: Double = 0.0
+    var tax:         Double = 0.0
+
+    let userDefaults = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
