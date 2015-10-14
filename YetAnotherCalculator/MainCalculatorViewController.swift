@@ -26,6 +26,24 @@ class MainCalculatorViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func digitTouchUpInside(sender: UIButton) {
+    }
     
+    @IBAction func operatorTouchUpInside(sender: UIButton) {
+    }
     
+    @IBAction func equalTouchUpInside(sender: UIButton) {
+    }
+    
+    @IBAction func minusTenPercentTouchUpInside(sender: AnyObject) {
+    }
+    
+    @IBAction func addTaxTouchUpInside(sender: AnyObject) {
+    }
+    
+    @IBAction func memoryTouchUpInside(sender: UIButton) {
+    }
+    
+    @IBAction func clearTouchUpInside(sender: AnyObject) {
+    }
 }
