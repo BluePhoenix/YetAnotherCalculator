@@ -50,6 +50,15 @@ class MainCalculatorViewController: UIViewController {
     }
     
     @IBAction func digitTouchUpInside(sender: UIButton) {
+        if let digit = sender.currentTitle {
+            if !userIsTypingANumber {
+                displayLabel.text = ""
+                displayLabel.text = digit
+                userIsTypingANumber = true
+            } else {
+                displayLabel.text = displayLabel.text! + digit
+            }
+        }
     }
     
     @IBAction func operatorTouchUpInside(sender: UIButton) {
