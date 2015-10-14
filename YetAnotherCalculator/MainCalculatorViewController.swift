@@ -118,6 +118,12 @@ class MainCalculatorViewController: UIViewController {
         }
     }
     
+    @IBAction func squareRootTapped(sender: AnyObject) {
+    }
+    
+    @IBAction func percentageTapped(sender: AnyObject) {
+    }
+    
     @IBAction func equalTouchUpInside(sender: UIButton) {
     }
     

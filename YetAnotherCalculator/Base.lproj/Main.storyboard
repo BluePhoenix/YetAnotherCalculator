@@ -334,7 +334,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorTouchUpInside:" destination="aCh-0J-Dg9" eventType="touchUpInside" id="rca-qR-dbR"/>
+                                    <action selector="squareRootTapped:" destination="aCh-0J-Dg9" eventType="touchUpInside" id="egB-7K-bg9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5N-rO-MSM">
@@ -346,7 +346,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorTouchUpInside:" destination="aCh-0J-Dg9" eventType="touchUpInside" id="3kx-mi-JyJ"/>
+                                    <action selector="percentageTapped:" destination="aCh-0J-Dg9" eventType="touchUpInside" id="NZ2-dK-AJM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-yu-Zz2">
