@@ -9,10 +9,7 @@
 import UIKit
 
 class MainCalculatorViewController: UIViewController {
-    /*
-    Symbol reference:
-    ÷ × − + √ % ⚙ =
-    */
+    
     @IBOutlet weak var displayLabel: UILabel!
     var displayValue: Double {
         get {
@@ -62,6 +59,56 @@ class MainCalculatorViewController: UIViewController {
     }
     
     @IBAction func operatorTouchUpInside(sender: UIButton) {
+        // Symbol reference:  ÷ × − + √ % ⚙ =
+
+        userIsTypingANumber = false
+        guard let thisOperator = sender.currentTitle else {
+            print("Error: current operator has no title")
+            return
+        }
+        
+        currentOperator = thisOperator
+        
+        if numberOne == 0 && numberTwo == 0 {
+            switch currentOperator {
+            case "÷":
+                currentOperator = "/"
+                numberOne = displayValue
+            case "×":
+                currentOperator = "*"
+                numberOne = displayValue
+            case "−":
+                currentOperator = "-"
+                numberOne = displayValue
+            case "+":
+                currentOperator = "+"
+                numberOne = displayValue
+            default:
+                break
+            }
+        } else if numberOne != 0 && numberTwo == 0 {
+            switch currentOperator {
+            case "÷":
+                currentOperator = "/"
+                numberTwo = displayValue
+                displayValue = numberOne / numberTwo
+                numberOne = displayValue
+                numberTwo = 0
+            case "×":
+                currentOperator = "*"
+                numberTwo = displayValue
+            case "−":
+                currentOperator = "-"
+                numberTwo = displayValue
+            case "+":
+                currentOperator = "+"
+                numberTwo = displayValue
+            default:
+                break
+            }
+            
+            numberOne = numberTwo
+        }
     }
     
     @IBAction func equalTouchUpInside(sender: UIButton) {
