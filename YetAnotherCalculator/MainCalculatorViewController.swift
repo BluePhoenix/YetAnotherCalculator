@@ -14,6 +14,19 @@ class MainCalculatorViewController: UIViewController {
     ÷ × − + √ % ⚙ =
     */
     @IBOutlet weak var displayLabel: UILabel!
+    var displayValue: Double {
+        get {
+            if let value = Double(displayLabel.text!) {
+                return value
+            } else {
+                // TODO: Revise if this should be the proper one to return
+                return Double.infinity
+            }
+        }
+        set {
+            displayLabel.text = "\(newValue)"
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
