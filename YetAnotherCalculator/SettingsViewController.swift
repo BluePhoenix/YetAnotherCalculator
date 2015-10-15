@@ -10,26 +10,42 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var taxRateTextField: UITextField!
+    var taxRateValue: Double? {
+        get {
+            if let taxRate = Double(taxRateTextField.text!) {
+                return taxRate/100.0
+            } else {
+                return nil
+            }
+        }
+        set {
+            if let newValidValue = newValue {
+                taxRateTextField.text = String(format: "%.2f", (newValidValue * 100.0))
+            }
+        }
+    }
+    
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let taxRate = userDefaults.objectForKey("taxRate") as! Double? {
+            taxRateValue = taxRate
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func applyTaxRateTouchUpInside(sender: AnyObject) {
+        if let taxRate = taxRateValue {
+            userDefaults.setDouble(taxRate, forKey: "taxRate")
+        }
+        dismissViewControllerAnimated(true, completion: nil)
     }
-    */
-
 }

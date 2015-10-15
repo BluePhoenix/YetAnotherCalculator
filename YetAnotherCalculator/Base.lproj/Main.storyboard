@@ -557,6 +557,9 @@
                                 <state key="normal" title="Apply Tax Rate">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="applyTaxRateTouchUpInside:" destination="IUh-bd-pv4" eventType="touchUpInside" id="xZP-aw-J72"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter tax rate (6.5)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bbb-IG-LyW">
                                 <rect key="frame" x="20" y="57" width="560" height="30"/>
@@ -577,6 +580,9 @@
                             <constraint firstItem="Bbb-IG-LyW" firstAttribute="leading" secondItem="0ZM-02-k0q" secondAttribute="leadingMargin" id="MGV-Fh-giR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="taxRateTextField" destination="Bbb-IG-LyW" id="YkA-Fy-ex9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syv-D3-8TS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
