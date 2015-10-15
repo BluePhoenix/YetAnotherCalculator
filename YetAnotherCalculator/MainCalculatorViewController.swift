@@ -176,6 +176,11 @@ class MainCalculatorViewController: UIViewController {
     }
     
     @IBAction func clearTouchUpInside(sender: AnyObject) {
+        // Remove the last entered number
+        if userIsTypingANumber {
+            displayLabel.text = "0"
+            userIsTypingANumber = false
+        }
     }
     
     @IBAction func clearAll(sender: AnyObject) {
