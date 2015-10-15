@@ -169,7 +169,9 @@ class MainCalculatorViewController: UIViewController {
     }
     
     @IBAction func addTaxTouchUpInside(sender: AnyObject) {
-        // TODO: Program once we have tax setting saved
+        if let taxRate = userDefaults.objectForKey("taxRate") as! Double? {
+            displayValue = (displayValue) * (1 + taxRate)
+        }
     }
     
     @IBAction func memoryTouchUpInside(sender: UIButton) {
