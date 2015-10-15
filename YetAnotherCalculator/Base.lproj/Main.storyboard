@@ -345,6 +345,9 @@
                                 <state key="normal" title="⚙">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="IUh-bd-pv4" kind="show" identifier="showSettings" id="8ed-9T-oXF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6W-6u-kYb">
                                 <rect key="frame" x="474" y="508" width="106" height="72"/>
@@ -528,6 +531,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzY-s9-1GA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1085" y="465"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="ufy-1h-qyd">
+            <objects>
+                <viewController id="IUh-bd-pv4" customClass="SettingsViewController" customModule="YetAnotherCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4hX-WQ-wil"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Za-Sf-f7P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0ZM-02-k0q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter you tax rate and press apply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKl-JB-Yvn">
+                                <rect key="frame" x="170" y="28" width="261" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MV-XK-S2E">
+                                <rect key="frame" x="249" y="95" width="103" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Apply Tax Rate">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter tax rate (6.5)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bbb-IG-LyW">
+                                <rect key="frame" x="20" y="57" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.36078431372549019" green="0.36862745098039218" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8MV-XK-S2E" firstAttribute="centerX" secondItem="0ZM-02-k0q" secondAttribute="centerX" id="0hf-qj-uoS"/>
+                            <constraint firstItem="Bbb-IG-LyW" firstAttribute="trailing" secondItem="0ZM-02-k0q" secondAttribute="trailingMargin" id="15i-ls-c1I"/>
+                            <constraint firstItem="IKl-JB-Yvn" firstAttribute="top" secondItem="4hX-WQ-wil" secondAttribute="bottom" constant="8" id="24S-5j-cJz"/>
+                            <constraint firstItem="IKl-JB-Yvn" firstAttribute="centerX" secondItem="0ZM-02-k0q" secondAttribute="centerX" id="HE9-uw-LfW"/>
+                            <constraint firstItem="Bbb-IG-LyW" firstAttribute="top" secondItem="IKl-JB-Yvn" secondAttribute="bottom" constant="8" id="K3B-h8-Cjm"/>
+                            <constraint firstItem="8MV-XK-S2E" firstAttribute="top" secondItem="Bbb-IG-LyW" secondAttribute="bottom" constant="8" id="MBI-rz-lTz"/>
+                            <constraint firstItem="Bbb-IG-LyW" firstAttribute="leading" secondItem="0ZM-02-k0q" secondAttribute="leadingMargin" id="MGV-Fh-giR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Syv-D3-8TS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="465"/>
         </scene>
     </scenes>
 </document>

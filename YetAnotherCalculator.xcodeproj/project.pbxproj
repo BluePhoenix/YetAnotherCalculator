@@ -14,6 +14,7 @@
 		CEFB1E221BCDACED00F8B9D2 /* YetAnotherCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB1E211BCDACED00F8B9D2 /* YetAnotherCalculatorTests.swift */; };
 		CEFB1E2D1BCDACED00F8B9D2 /* YetAnotherCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB1E2C1BCDACED00F8B9D2 /* YetAnotherCalculatorUITests.swift */; };
 		CEFB1E3B1BCDE4B300F8B9D2 /* MainCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB1E3A1BCDE4B300F8B9D2 /* MainCalculatorViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CEFB1E3D1BCF2BDB00F8B9D2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB1E3C1BCF2BDB00F8B9D2 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CEFB1E2C1BCDACED00F8B9D2 /* YetAnotherCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YetAnotherCalculatorUITests.swift; sourceTree = "<group>"; };
 		CEFB1E2E1BCDACED00F8B9D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEFB1E3A1BCDE4B300F8B9D2 /* MainCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCalculatorViewController.swift; sourceTree = "<group>"; };
+		CEFB1E3C1BCF2BDB00F8B9D2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				CEFB1E151BCDACED00F8B9D2 /* LaunchScreen.storyboard */,
 				CEFB1E181BCDACED00F8B9D2 /* Info.plist */,
 				CEFB1E3A1BCDE4B300F8B9D2 /* MainCalculatorViewController.swift */,
+				CEFB1E3C1BCF2BDB00F8B9D2 /* SettingsViewController.swift */,
 			);
 			path = YetAnotherCalculator;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				CEFB1E0D1BCDACED00F8B9D2 /* AppDelegate.swift in Sources */,
 				CEFB1E3B1BCDE4B300F8B9D2 /* MainCalculatorViewController.swift in Sources */,
+				CEFB1E3D1BCF2BDB00F8B9D2 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
