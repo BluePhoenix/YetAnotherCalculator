@@ -173,6 +173,25 @@ class MainCalculatorViewController: UIViewController {
     }
     
     @IBAction func memoryTouchUpInside(sender: UIButton) {
+        memoryType = sender.currentTitle!
+        
+        switch memoryType {
+        case "M+":
+            savedNumber = savedNumber + displayValue
+            userDefaults.setDouble(savedNumber, forKey: "savedNumber")
+        case "M-":
+            savedNumber = savedNumber - displayValue
+            userDefaults.setDouble(savedNumber, forKey: "savedNumber")
+        case "MC":
+            savedNumber = 0
+            userDefaults.removeObjectForKey("savedNumber")
+            displayValue = 0
+        case "MR":
+            displayValue = userDefaults.doubleForKey("savedNumber")
+        default:
+            break
+        }
+        userIsTypingANumber = false
     }
     
     @IBAction func clearTouchUpInside(sender: AnyObject) {
@@ -193,5 +212,6 @@ class MainCalculatorViewController: UIViewController {
         numberOne = nil
         numberTwo = nil
         displayValue = 0
+        userDefaults.removeObjectForKey("savedNumber")
     }
 }
