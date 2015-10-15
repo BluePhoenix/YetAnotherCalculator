@@ -49,6 +49,7 @@
 		CEFB1E2E1BCDACED00F8B9D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEFB1E3A1BCDE4B300F8B9D2 /* MainCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCalculatorViewController.swift; sourceTree = "<group>"; };
 		CEFB1E3C1BCF2BDB00F8B9D2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CEFB1E3E1BCF341200F8B9D2 /* Readme.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Readme.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 				CEFB1E181BCDACED00F8B9D2 /* Info.plist */,
 				CEFB1E3A1BCDE4B300F8B9D2 /* MainCalculatorViewController.swift */,
 				CEFB1E3C1BCF2BDB00F8B9D2 /* SettingsViewController.swift */,
+				CEFB1E3E1BCF341200F8B9D2 /* Readme.playground */,
 			);
 			path = YetAnotherCalculator;
 			sourceTree = "<group>";
