@@ -22,6 +22,7 @@ class MainCalculatorViewController: UIViewController {
         }
         set {
             displayLabel.text = "\(newValue)"
+            userIsTypingANumber = false
         }
     }
     
