@@ -119,23 +119,74 @@ class MainCalculatorViewController: UIViewController {
     }
     
     @IBAction func squareRootTapped(sender: AnyObject) {
+        userIsTypingANumber = false
+        
+        displayValue = sqrt(displayValue)
+        
+        numberOne = displayValue
+        numberTwo = nil
     }
     
     @IBAction func percentageTapped(sender: AnyObject) {
+        userIsTypingANumber = false
+        
+        numberTwo = displayValue
+        if currentOperator == "+" || currentOperator == "-" {
+            displayValue = (numberTwo! / 100) * numberOne!
+        } else if currentOperator == "/" || currentOperator == "*" {
+            displayValue = (numberTwo! / 100)
+        }
+        
+        numberOne = displayValue
+        numberTwo = nil
     }
     
     @IBAction func equalTouchUpInside(sender: UIButton) {
+        userIsTypingANumber = false
+        numberTwo = displayValue
+        
+        switch currentOperator {
+        case "/":
+            displayValue = numberOne! / numberTwo!
+        case "*":
+            displayValue = numberOne! * numberTwo!
+        case "+":
+            displayValue = numberOne! + numberTwo!
+        case "-":
+            displayValue = numberOne! - numberTwo!
+        default:
+            break
+        }
+        
+        numberOne = displayValue
+        numberTwo = nil
+        
     }
     
     @IBAction func minusTenPercentTouchUpInside(sender: AnyObject) {
+        userIsTypingANumber = false
+        displayValue = displayValue * ((100-10)/100)
     }
     
     @IBAction func addTaxTouchUpInside(sender: AnyObject) {
+        // TODO: Program once we have tax setting saved
     }
     
     @IBAction func memoryTouchUpInside(sender: UIButton) {
     }
     
     @IBAction func clearTouchUpInside(sender: AnyObject) {
+    }
+    
+    @IBAction func clearAll(sender: AnyObject) {
+        // Reset everything
+        resetState()
+    }
+    
+    func resetState() {
+        currentOperator = ""
+        numberOne = nil
+        numberTwo = nil
+        displayValue = 0
     }
 }

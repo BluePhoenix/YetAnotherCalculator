@@ -154,18 +154,6 @@
                                     <action selector="digitTouchUpInside:" destination="aCh-0J-Dg9" eventType="touchUpInside" id="8dq-PL-lSh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzu-gV-fu1">
-                                <rect key="frame" x="134" y="428" width="105" height="72"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="2">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="digitTouchUpInside:" destination="aCh-0J-Dg9" eventType="touchUpInside" id="813-Ss-5zm"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-Wq-FKy">
                                 <rect key="frame" x="134" y="508" width="105" height="72"/>
                                 <animations/>
@@ -378,6 +366,21 @@
                                 <state key="normal" title="CA">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearAll:" destination="aCh-0J-Dg9" eventType="touchUpInside" id="dAw-lF-Bhq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzu-gV-fu1">
+                                <rect key="frame" x="134" y="428" width="105" height="72"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="digitTouchUpInside:" destination="aCh-0J-Dg9" eventType="touchUpInside" id="813-Ss-5zm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
